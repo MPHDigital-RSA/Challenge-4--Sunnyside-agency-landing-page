@@ -286,7 +286,6 @@ header {
 .images-group .image {
     width: 25%;
     min-height: 300px;
-    background-color: green;
 }
 
 .images-group .image img {
