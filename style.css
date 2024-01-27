@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+
+:root {
+
+    /* COLORS */
+
+    --Soft-red: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    /*graphic design text*/
+    --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+    /*photography text*/
+    --Dark-blue: hsl(198, 62%, 26%);
+    /*footer*/
+    --Dark-moderate-cyan: hsl(168, 34%, 41%);
+
+
+    --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);
+
+    /* FONT SIZE */
+    --font-size: 18px;
+}
+
+/* UTILITY CLASSES */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* headings */
+
+.h-1 {
+    font-family: Fraunces;
+    font-size: 3em;
+    font-weight: 900;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+
+    color: var(--White);
+}
+
+.h-2 {
+    font-family: Fraunces;
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.h-3 {
+    font-family: Fraunces;
+    font-size: 1em;
+    font-weight: 900;
+}
+
+p,
+a {
+    font-family: Barlow;
+}
+
+
+button {
+    font-family: Fraunces;
+    font-weight: 600;
+}
+
+/* temporary code */
+
+
+/* GRID */
+
+/* hero styling */
+.hero {
+
+    background-image: url(desktop-image-header.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 300px;
+
+    text-align: center;
+}
+
+header {
+    max-width: 62.5em;
+    margin: 0 auto 100px auto;
+    padding-inline: 2em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero li {
+    list-style-type: none;
+}
+
+.hero a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.header-button {
+    background-color: white;
+    padding: .8em 2em;
+    border-radius: 5em;
+}
+
+.header-button a {
+    color: var(--Dark-blue);
+}
+
+/* text image section styling  -- styling for both section 2 and 3*/
+
+.text-image-section {
+    display: flex;
+}
+
+.text-image-section .text {
+    width: 50%;
+
+    padding-inline: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.text-image-section .text .h-2 {
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.text-image-section .text .p-1 {
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 500;
+}
+
+
+.text-image-section .text button {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border: none;
+    background: none;
+    padding-inline: 5px;
+
+    position: relative;
+
+}
+
+.text-image-section .text button::after {
+    content: "";
+    position: absolute;
+    background-color: var(--Yellow);
+    width: 100%;
+    height: 10px;
+    border-radius: 5rem;
+
+    left: 0;
+    bottom: -2px;
+    z-index: -1;
+}
+
+.text-image-section .text button:hover::after {
+    background-color: hsla(51, 100%, 49%, 0.469);
+}
+
+.text-image-section .image {
+    width: 50%;
+    max-height: 25em;
+}
+
+.text-image-section .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* styling for the photography section and graphic design */
+
+.graphic-design-section {
+    display: flex;
+}
+
+.graphic-design {
+    width: 50%;
+    padding-top: 20em;
+    padding-bottom: 3em;
+    text-align: center;
+    padding-inline: 10em;
+
+    background-image: url(desktop-image-graphic-design.jpg);
+    background-position: center top;
+    background-size: cover;
+
+    display: grid;
+    gap: 10px;
+}
+
+.photography {
+    width: 50%;
+    padding-top: 20em;
+    padding-bottom: 3em;
+    text-align: center;
+    padding-inline: 10em;
+
+    background-image: url(desktop-image-photography.jpg);
+    background-position: center top;
+    background-size: cover;
+
+    display: grid;
+    gap: 10px;
+}
+
+/* TESTIMONIALS */
+
+.testimonials-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-block: 80px;
+    padding-inline: 2em;
+
+}
+
+.testimonials-group {
+    display: flex;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.person .avatar {
+    max-width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    background-color: green;
+}
+
+.person .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile p:last-child {
+    color: var(--Grayish-blue);
+    font-size: 14px;
+}
+
+/* IMAGE GROUP STYLING */
+
+.images-group {
+    display: flex;
+}
+
+.images-group .image {
+    width: 25%;
+    min-height: 300px;
+    background-color: green;
+}
+
+.images-group .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* FOOTER STYLING */
+
+.footer {
+    background-color: #9aeada;
+    padding-block: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer li {
+    list-style-type: none;
+}
+
+.footer a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #2C7566;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.footer .social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.footer .social-links svg {
+    fill: #2C7566;
+}
+
+.footer .social-links svg:hover {
+    fill: #fff;
+    cursor: pointer;
+}
+
+/* MEDIA QUERRY */
+
+@media screen and (max-width: 60em) {
+
+    .text-image-section .text {
+        padding-inline: 3em;
+
+    }
+
+    .graphic-design {
+        padding-top: 15em;
+        padding-bottom: 3em;
+
+        padding-inline: 3em;
+
+        gap: 5px;
+    }
+
+    .photography {
+        padding-top: 15em;
+        padding-bottom: 3em;
+
+        padding-inline: 3em;
+
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 44.375em) {
+
+    .hero ul {
+        display: none;
+    }
+
+    .text-image-section {
+        flex-direction: column;
+    }
+
+    .flex-direction-reverse {
+        flex-direction: column-reverse;
+    }
+
+    .text-image-section .text {
+        width: 100%;
+        padding-inline: 2em;
+        padding-block: 3em;
+        text-align: center;
+    }
+
+    .text-image-section .image {
+        width: 100%;
+    }
+
+    .graphic-design-section {
+        flex-direction: column;
+    }
+
+    .graphic-design {
+        width: 100%;
+        padding-inline: 5em;
+    }
+
+    .photography {
+        width: 100%;
+        padding-inline: 5em;
+    }
+
+    .testimonials-group {
+        flex-direction: column;
+    }
+
+    .person {
+        border-bottom: 1px solid rgb(238, 238, 238);
+        padding-bottom: 20px;
+    }
+
+    .person:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .images-group {
+        flex-direction: column;
+    }
+
+    .images-group .image {
+        width: 100%;
+        min-height: 400px;
+    }
+}
